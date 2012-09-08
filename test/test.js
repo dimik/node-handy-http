@@ -10,7 +10,7 @@ exports.testInstanceProperties = function (test) {
     var client = new HTTPClient();
 
     test.equal(typeof client.open, 'function');
-    test.equal(typeof client.close, 'function');
+    // test.equal(typeof client.close, 'function');
 
     test.done();
 };
@@ -18,15 +18,15 @@ exports.testInstanceProperties = function (test) {
 exports.testGetRequest = function (test) {
     var client = new HTTPClient();
 
-    test.expect(5);
+    test.expect(4);
 
-    test.ok(client.open('http://www.yandex.ru/yandsearch?text=test', function (err, page) {
+    client.open('http://www.yandex.ru/yandsearch?text=test', function (err, page) {
         test.ifError(err);
         test.equal(typeof page, 'string');
         test.ok(page.length > 0);
         test.ok(~page.indexOf('html'));
         test.done();
-    }) instanceof HTTPClient);
+    });
 };
 
 exports.testPostRequest = function (test) {
@@ -47,13 +47,13 @@ exports.testPostRequest = function (test) {
            , "sc" : "1"
         };
 
-    test.expect(5);
+    test.expect(4);
 
-    test.ok(client.open('http://translate.google.com/', data, function (err, page) {
+    client.open({ url : 'http://translate.google.com/', data: data }, function (err, page) {
         test.ifError(err);
         test.equal(typeof page, 'string');
         test.ok(page.length > 0);
         test.ok(~page.indexOf('The quick brown fox jumps over the lazy dog'));
         test.done();
-    }) instanceof HTTPClient);
+    });
 };
