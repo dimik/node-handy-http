@@ -1,7 +1,7 @@
 {
     "name" : "http-client",
     "version" : "1.0",
-    "description" : "Simple wrapper over the node http.request",
+    "description" : "Simple wrapper over native node http.request",
     "author" : "Dmitry Poklonskiy <dimik@ya.ru>",
     "main" : "index",
     "repository" : {
@@ -13,6 +13,6 @@
             "type": "AS IS"
         }
     ],
-    "engine" : { "node" : ">=0.4.0" }
+    "engine" : { "node" : ">=0.6.0" }
 }
 
