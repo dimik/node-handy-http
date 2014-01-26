@@ -1,4 +1,4 @@
-Handy HTTP Client
+NodeJS handy http[s] client
 ============
 
 Handy-http module provides simple and flexible interface for NodeJS native <a htref="http://nodejs.org/api/http.html#http_http_request_options_callback">http.request<a>.
