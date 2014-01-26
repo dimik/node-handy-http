@@ -1,18 +1,25 @@
 {
-    "name" : "http-client",
-    "version" : "1.0",
-    "description" : "Simple wrapper over native node http.request",
-    "author" : "Dmitry Poklonskiy <dimik@ya.ru>",
-    "main" : "index",
-    "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/dimik/http-client"
-    },
-    "licenses" : [
-        {
-            "type": "AS IS"
-        }
-    ],
-    "engine" : { "node" : ">=0.6.0" }
+  "name": "handy-http",
+  "version": "1.0.0",
+  "description": "Simple wrapper for native NodeJS http[s].request",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dimik/node-handy-http.git"
+  },
+  "keywords": [
+    "http",
+    "https"
+  ],
+  "author": "Dmitry Poklonskiy",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dimik/node-handy-http/issues"
+  }
 }
-

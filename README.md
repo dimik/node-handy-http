@@ -1,7 +1,7 @@
-HTTP Client
+Handy HTTP
 ============
 
-HTTP-Client class provides simple and flexible interface for NodeJS native <a htref="http://nodejs.org/api/http.html#http_http_request_options_callback">http.request<a>.
+Handy-http module provides simple and flexible interface for NodeJS native <a htref="http://nodejs.org/api/http.html#http_http_request_options_callback">http.request<a>.
 
 Description
 ============
@@ -21,7 +21,7 @@ Main features:
 Example
 ------------
 ```javascript
-var HTTPClient = require('HTTPClient'),
+var HTTPClient = require('handy-http'),
     client = new HTTPCLient(),
     onResponse = function (err, res) {
         console.log(err || res);

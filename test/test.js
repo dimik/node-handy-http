@@ -10,7 +10,6 @@ exports.testInstanceProperties = function (test) {
     var client = new HTTPClient();
 
     test.equal(typeof client.open, 'function');
-    // test.equal(typeof client.close, 'function');
 
     test.done();
 };
@@ -20,11 +19,12 @@ exports.testGetRequest = function (test) {
 
     test.expect(4);
 
-    client.open('http://www.yandex.ru/yandsearch?text=test', function (err, page) {
+    client.open('http://google.com', function (err, page) {
+        page = page.toString();
         test.ifError(err);
         test.equal(typeof page, 'string');
         test.ok(page.length > 0);
-        test.ok(~page.indexOf('html'));
+        test.ok(~page.indexOf('HTML'));
         test.done();
     });
 };
@@ -49,7 +49,8 @@ exports.testPostRequest = function (test) {
 
     test.expect(4);
 
-    client.open({ url : 'http://translate.google.com/', data: data }, function (err, page) {
+    client.open({ url: 'http://translate.google.com/', data: data }, function (err, page) {
+        page = page.toString();
         test.ifError(err);
         test.equal(typeof page, 'string');
         test.ok(page.length > 0);
