@@ -1,1 +1,1 @@
-module.exports = require('./lib/http-client');
+module.exports = require('./lib/handy-http');
