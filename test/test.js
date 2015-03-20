@@ -49,12 +49,26 @@ exports.testPostRequest = function (test) {
 
     test.expect(4);
 
-    client.open({ url: 'http://translate.google.com/', data: data }, function (err, page) {
+    client.open({ url: 'https://translate.google.com/', data: data }, function (err, page) {
         page = page.toString();
         test.ifError(err);
         test.equal(typeof page, 'string');
         test.ok(page.length > 0);
         test.ok(~page.indexOf('The quick brown fox jumps over the lazy dog'));
+        test.done();
+    });
+};
+
+exports.testEmptyPostRequest = function (test) {
+    var client = new HTTPClient();
+
+    test.expect(3);
+
+    client.open({ url: 'https://translate.google.com/' }, function (err, page) {
+        page = page.toString();
+        test.ifError(err);
+        test.equal(typeof page, 'string');
+        test.ok(page.length > 0);
         test.done();
     });
 };
