@@ -1,6 +1,6 @@
 {
   "name": "handy-http",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple wrapper for native NodeJS http[s].request",
   "main": "index.js",
   "directories": {
